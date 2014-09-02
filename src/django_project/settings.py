@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'adventure_time'
+    'adventure_time',
+    'tastypie'
 )
 
 MIDDLEWARE_CLASSES = (
