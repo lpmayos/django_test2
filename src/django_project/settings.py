@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'adventure_time',
-    'tastypie'
+    'tastypie',
+    'tastypie_swagger',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,3 +83,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TASTYPIE_SWAGGER_API_MODULE = 'adventure_time.api'
+# TASTYPIE_SWAGGER_API_MODULE = 'urls.v1_api'
