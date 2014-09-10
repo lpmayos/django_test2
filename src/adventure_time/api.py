@@ -2,6 +2,7 @@ from tastypie import fields
 from tastypie.resources import Resource
 from tastypie.bundle import Bundle
 from adventure_time.models import World, Character
+from tastypie.api import Api
 
 
 class CharacterResource(Resource):
@@ -146,3 +147,9 @@ class WorldResource(Resource):
     def rollback(self, bundles):
         import pdb; pdb.set_trace()
         pass
+
+# world_resource = WorldResource()
+# character_resource = CharacterResource()
+v1_api = Api(api_name='v1')
+v1_api.register(WorldResource())
+v1_api.register(CharacterResource())

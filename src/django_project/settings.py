@@ -84,5 +84,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TASTYPIE_SWAGGER_API_MODULE = 'adventure_time.api'
-# TASTYPIE_SWAGGER_API_MODULE = 'urls.v1_api'
+TASTYPIE_SWAGGER_API_MODULE = 'adventure_time.api.v1_api'
+# TASTYPIE_SWAGGER_API_MODULE = 'django_project.urls.v1_api'
