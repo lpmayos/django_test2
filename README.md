@@ -5,6 +5,8 @@ Small project to play a little bit with **Django** and **Tastypie** with **neo4j
 
 It implements some demo models, and offers interaction with them through a **restful API**
 
+You'll find API documentation on http://localhost:8000/api/v1/doc/ thanks to **tastypie_swagger**
+
 
 How to use it
 -------------
