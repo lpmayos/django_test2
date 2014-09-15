@@ -1,5 +1,5 @@
 apt-get update
-apt-get -y install git python-virtualenv software-properties-common python-software-properties curl vim
+apt-get -y install git python-dev python-virtualenv software-properties-common python-software-properties curl vim
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
 
@@ -25,3 +25,4 @@ apt-get -y install neo4j
 
 cp /vagrant/provisioning/neo4j-server.properties /etc/neo4j
 chown neo4j.adm /etc/neo4j/neo4j-server.properties
+
