@@ -7,3 +7,5 @@ cp /vagrant/provisioning/dropneo4jdb.sh /home/vagrant/bin/dropneo4jdb.sh
 chmod 744 /home/vagrant/bin/dropneo4jdb.sh
 cp /vagrant/provisioning/install_demo_db.sh /home/vagrant/bin/install_demo_db.sh
 chmod 744 /home/vagrant/bin/install_demo_db.sh
+cp /vagrant/provisioning/install_joc_proves.sh /home/vagrant/bin/install_joc_proves.sh
+chmod 744 /home/vagrant/bin/install_joc_proves.sh

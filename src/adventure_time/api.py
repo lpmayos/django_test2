@@ -38,6 +38,7 @@ class CharacterResource(Resource):
         return self.get_object_list(bundle.request)
 
     def obj_get(self, bundle, **kwargs):
+        # TODO lpmayos! provar: Character.nodes.get(pk=kwargs['pk'])
         nodes = Character.nodes.filter(pk=kwargs['pk']).all()
         if nodes:
             return nodes[0]
