@@ -9,7 +9,7 @@ $ ./manage.py shell_plus
 
 ## neomodel
 
-** imports **
+**imports**
 
 ```python
 from adventure_time.models import World, Location, User
@@ -18,7 +18,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 ```
 
-** listing objects **
+**listing objects**
 
 ```python
 world_category = World.category()
@@ -31,7 +31,7 @@ user_category = User.category()
 users = user_category.instance.all()
 ```
 
-** creating objects **
+**creating objects**
 
 ```python
 w1 = World(id='1', name='world B', world_type='type B', surface=7652, creation_date='2014-08-12T00:00')
@@ -44,7 +44,7 @@ u1 = User(user_id='1', name='user 1')
 u1.save()
 ```
 
-** relating objects **
+**relating objects**
 
 ```python
 loc1.world.connect(w1)
@@ -52,7 +52,7 @@ loc1.world.connect(w1)
 w1.location.connect(l1)
 ```
 
-** getting objects info **
+**getting objects info**
 
 ```python
 users[0].world.all()
@@ -61,7 +61,7 @@ users[0].world.all()
 serializer = WorldSerializer(world1)
 ```
 
-** clear db **
+**clear db**
 
 Execute 
 ```
@@ -71,27 +71,27 @@ $ dropneo4jdb.sh
 
 ## NEO4J FIRST STEPS
 
-** clear database **
+**clear database**
 ```
 vagrant@precise64:~$ dropneo4jdb.sh
 ```
 
 Open your favorite browser (it's Chrome, isn't it?) and point it to http://localhost:7474/
 
-** create nodes **
+**create nodes**
 ```
 CREATE (n:Person { name : 'Andrés', surname: 'Canta Raro', title : 'artist' })
 CREATE (n:Person { name : 'Jesús', title : 'Developer' })
 ```
 
-** create relationships **
+**create relationships**
 ```
 MATCH (a:Person {name: 'Andrés'}),(b:Person {name: 'Jesús'})
 CREATE (a)-[r:RELTYPE]->(b)
 RETURN r
 ```
 
-** set properties **
+**set properties**
 ```
 MATCH (n { name: 'Jesús' })
 SET n.surname = 'Tomás Dado'
