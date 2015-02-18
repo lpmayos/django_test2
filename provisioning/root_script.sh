@@ -26,3 +26,4 @@ apt-get -y install neo4j
 cp /vagrant/provisioning/neo4j-server.properties /etc/neo4j
 chown neo4j.adm /etc/neo4j/neo4j-server.properties
 
+service neo4j-service restart
